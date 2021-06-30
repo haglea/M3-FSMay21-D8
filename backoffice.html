@@ -10,8 +10,7 @@
 
 form {
     margin: auto;
-    display: block;
- 
+    display: block; 
 }
 
 .jumbotron {
@@ -19,6 +18,7 @@ form {
   padding-bottom: 3rem;
   margin-bottom: 0;
   background-color: #fff;
+}
 
   @media (min-width: 768px) {
   .jumbotron {
@@ -55,28 +55,17 @@ footer p {
 
 </head>
 <body>
-    <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-8 col-md-7 py-4">
-                <h4 class="text-white">About</h4>
-                <p class="text-muted">Back Office</p>
-              </div>
-             
-            </div>
-          </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-          <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-              
-              <strong>Amazon Products</strong>
-            </a>
-            
-          </div>
-        </div>
-      </header>
+
+
+  <header>  
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">       
+          <strong>Amazon Products Back Office</strong>
+        </a>      
+      </div>
+    </div>
+  </header>
 
       <main role="main">
 
@@ -91,7 +80,7 @@ footer p {
             <div class="container w-50">
 
 <div class="row">
-    <div class="col-12 mr-auto"
+    <div class="col-12 mr-auto">
 
                 <form>
                    
@@ -112,8 +101,8 @@ footer p {
                         <input type="text" class="form-control" id="brand" placeholder="brand">
                       </div>
                       <div class="form-group">
-                        <label for="imageurl">Image url</label>
-                        <input type="text" class="form-control" id="imageurl" placeholder="imageurl">
+                        <label for="imageUrl">Image url</label>
+                        <input type="text" class="form-control" id="imageUrl" placeholder="image url">
                       </div>
                     
                 
@@ -125,10 +114,11 @@ footer p {
                     </div>
                    
                   </div>
-
+</div>
+</div>
 </div>
                 </div>
-            </div>
+         
                
 
       </main>
@@ -146,24 +136,25 @@ footer p {
 
           <script>
 
-            const url = "https://striveschool-api.herokuapp.com/api/product/"
+            
             
             const addProduct = async () => {
-               
+
+                const url = "https://striveschool-api.herokuapp.com/api/product/"
                 const userData = {               
                             
                             name: document.getElementById("name").value,
                             description: document.getElementById("description").value,
                             price: document.getElementById("price").value,   
                             brand: document.getElementById("brand").value, 
-                            imageUrl: document.getElementById("imageurl").value
+                            imageUrl: document.getElementById("imageUrl").value
                                                    
                         }
                 try {
                     const response = await fetch(url, {
                         method: "POST",        
                         headers: {
-                        "Content type": "application/json",
+                        "Content-type": "application/json",
                         Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNmMwMGIzNTgxNzAwMTVjMjI3NDkiLCJpYXQiOjE2MjUwNTgzMDQsImV4cCI6MTYyNjI2NzkwNH0.Ibc--VACzfbnbVnmlo0H7tPvvmxWZW_tKIx3RWPsOSE"
                     },
                     body: JSON.stringify(userData)
@@ -171,9 +162,9 @@ footer p {
                 if(!response.ok) throw new Error("failed")
             
                 const data = await response.json()
-                console.log("Product added successfully")
+                console.log("Product added successfully", data)
             } catch (err) {
-                                console.error(err)
+               console.error(err)
                             }
                         }
 
