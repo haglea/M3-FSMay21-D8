@@ -1,308 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backoffice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<style>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
+form {
+    margin: auto;
+    display: block;
+ 
+}
 
-    
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
 
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  @media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+
+</style>
 
 
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Back Office</p>
-        </div>
-       
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        
-        <strong>Amazon Products</strong>
-      </a>
-      
-    </div>
-  </div>
-</header>
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Amazon Products Back Office Example</h1>    
-  
-    </div>
-  </section>
-
-  <div class="py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-6">
-          <div class="card mb-4 shadow-sm">
-           
-
-            <div class="card-body">
-                <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">                    
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Description</label>
-                        <input type="text" class="form-control" id="description" placeholder="description">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Brand</label>
-                        <input type="text" class="form-control" id="brand" placeholder="brand">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Image url</label>
-                        <input type="text" class="form-control" id="imageurl" placeholder="imageurl">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Price</label>
-                        <input type="text" class="form-control" id="price" placeholder="price">
-                      </div>
-                 
-                  </form>
-              
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button id="send" type="button" class="btn btn-sm btn-outline-secondary">Send</button>
-                  
-                </div>
-               
+</head>
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h4 class="text-white">About</h4>
+                <p class="text-muted">Back Office</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6">
-          <div class="card mb-4 shadow-sm">
-           
-
-            <div class="card-body">
-                <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">                    
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Description</label>
-                        <input type="text" class="form-control" id="description" placeholder="description">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Brand</label>
-                        <input type="text" class="form-control" id="brand" placeholder="brand">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Image url</label>
-                        <input type="text" class="form-control" id="imageurl" placeholder="imageurl">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Price</label>
-                        <input type="text" class="form-control" id="price" placeholder="price">
-                      </div>
-                 
-                  </form>
-              
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button id="send" type="button" class="btn btn-sm btn-outline-secondary">Send</button>
-                  
-                </div>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-
-       <div class="col-6">
-          <div class="card mb-4 shadow-sm">
-           
-
-            <div class="card-body">
-                <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">                    
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Description</label>
-                        <input type="text" class="form-control" id="description" placeholder="description">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Brand</label>
-                        <input type="text" class="form-control" id="brand" placeholder="brand">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Image url</label>
-                        <input type="text" class="form-control" id="imageurl" placeholder="imageurl">
-                      </div>
-                      <div class="form-group">
-                        <label for="brand">Price</label>
-                        <input type="text" class="form-control" id="price" placeholder="price">
-                      </div>
-                 
-                  </form>
-              
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button id="send" type="button" class="btn btn-sm btn-outline-secondary">Send</button>
-                  
-                </div>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-6">
-            <div class="card mb-4 shadow-sm">
              
-  
-              <div class="card-body">
-                  <form>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">                    
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="name">
-                      </div>
-                      <div class="form-group">
-                          <label for="name">Description</label>
-                          <input type="text" class="form-control" id="description" placeholder="description">
-                        </div>
-                        <div class="form-group">
-                          <label for="brand">Brand</label>
-                          <input type="text" class="form-control" id="brand" placeholder="brand">
-                        </div>
-                        <div class="form-group">
-                          <label for="brand">Image url</label>
-                          <input type="text" class="form-control" id="imageurl" placeholder="imageurl">
-                        </div>
-                        <div class="form-group">
-                          <label for="brand">Price</label>
-                          <input type="text" class="form-control" id="price" placeholder="price">
-                        </div>
-                   
-                    </form>
-                
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button id="send" type="button" class="btn btn-sm btn-outline-secondary">Send</button>
-                    
-                  </div>
-                 
-                </div>
-              </div>
             </div>
           </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              
+              <strong>Amazon Products</strong>
+            </a>
+            
+          </div>
+        </div>
+      </header>
 
-       
-        
-       
-      
+      <main role="main">
 
-      </div>
-    </div>
-  </div>
+        <section class="jumbotron text-center">
+            <div class="container">
+              <h1>Amazon Products Back Office Example</h1>    
+          
+            </div>
+          </section>
 
-</main>
+          <div class="py-5 bg-light">
+            <div class="container w-50">
 
-<footer class="text-muted">
-  <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>Amazon products example</p>
-    
-  </div>
-</footer>
-<script>
+<div class="row">
+    <div class="col-12 mr-auto"
 
-const url = "https://striveschool-api.herokuapp.com/api/product/"
+                <form>
+                   
+                      <div class="form-group">                    
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description" placeholder="description">
+                      </div>
+                      <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" id="price" placeholder="price">
+                      </div>
+                      <div class="form-group">
+                        <label for="brand">Brand</label>
+                        <input type="text" class="form-control" id="brand" placeholder="brand">
+                      </div>
+                      <div class="form-group">
+                        <label for="imageurl">Image url</label>
+                        <input type="text" class="form-control" id="imageurl" placeholder="imageurl">
+                      </div>
+                    
+                
+                  </form>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="send" type="button" class="btn btn-sm btn-secondary" onclick="addProduct()">Send</button>
+                      
+                    </div>
+                   
+                  </div>
 
-const addProduct = async event => {
-    event.preventDefault();
-    const userData = {
-                "_id": "5d318e1a8541744830bef139", //SERVER GENERATED
-                "name": "app test 1",  //REQUIRED
-                "description": "somthing longer", //REQUIRED
-                "brand": "nokia", //REQUIRED
-                "imageUrl": "https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80", //REQUIRED
-                "price": 100, //REQUIRED
-                "userId": "admin", //SERVER GENERATED
-                "createdAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
-                "updatedAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
-                "__v": 0 //SERVER GENERATED
-            }
-    try {
-        const response = await fetch(url, {
-            method: "POST",        
-            headers: {
-            "Content type": "application/json",
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNmMwMGIzNTgxNzAwMTVjMjI3NDkiLCJpYXQiOjE2MjUwNTgzMDQsImV4cCI6MTYyNjI2NzkwNH0.Ibc--VACzfbnbVnmlo0H7tPvvmxWZW_tKIx3RWPsOSE"
-        },
-        body: JSON.stringify(userData)
-    })
-    if(!response.ok) throw new Error("failed")
+</div>
+                </div>
+            </div>
+               
 
-    const data = await response.json()
-    console.log("Event added successfully")
-} catch (error) {
-                    console.error(error.message)
-                }
-            }
+      </main>
 
-</script>
 
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Back to top</a>
+              </p>
+              <p>Amazon products example</p>
+              
+            </div>
+          </footer>
+
+          <script>
+
+            const url = "https://striveschool-api.herokuapp.com/api/product/"
+            
+            const addProduct = async () => {
+               
+                const userData = {               
+                            
+                            name: document.getElementById("name").value,
+                            description: document.getElementById("description").value,
+                            price: document.getElementById("price").value,   
+                            brand: document.getElementById("brand").value, 
+                            imageUrl: document.getElementById("imageurl").value
+                                                   
+                        }
+                try {
+                    const response = await fetch(url, {
+                        method: "POST",        
+                        headers: {
+                        "Content type": "application/json",
+                        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNmMwMGIzNTgxNzAwMTVjMjI3NDkiLCJpYXQiOjE2MjUwNTgzMDQsImV4cCI6MTYyNjI2NzkwNH0.Ibc--VACzfbnbVnmlo0H7tPvvmxWZW_tKIx3RWPsOSE"
+                    },
+                    body: JSON.stringify(userData)
+                })
+                if(!response.ok) throw new Error("failed")
+            
+                const data = await response.json()
+                console.log("Product added successfully")
+            } catch (err) {
+                                console.error(err)
+                            }
+                        }
+
+           
+            </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
 </html>
